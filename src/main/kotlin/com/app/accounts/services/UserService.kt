@@ -30,11 +30,10 @@ class UserService(val db: UserRepository) {
 
         val updatedUser: User = userData.get()
 
+        updatedUser.username = user.username
         updatedUser.name = user.name
+        updatedUser.surname = user.surname
 
         return ResponseEntity<User?>(this.save(updatedUser), HttpStatus.OK)
     }
-
-    fun delete(id: Long) =
-        db.deleteById(id)
 }

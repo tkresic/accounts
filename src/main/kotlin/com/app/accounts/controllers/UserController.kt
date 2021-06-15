@@ -20,15 +20,7 @@ class UserController(val service: UserService) {
     fun create(@RequestBody user: User) =
         service.save(user)
 
-    @GetMapping("/{id}")
-    fun read(@PathVariable id: Long): Optional<User> =
-        service.read(id)
-
     @PutMapping("/{id}")
     fun update(@PathVariable id: Long, @RequestBody user: User): ResponseEntity<User?> =
         service.update(id, user);
-
-    @DeleteMapping("/{id}")
-    fun delete(@PathVariable id: Long) =
-        service.delete(id)
 }

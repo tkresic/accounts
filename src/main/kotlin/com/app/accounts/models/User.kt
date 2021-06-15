@@ -14,7 +14,12 @@ data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
+    var username: String,
     var name: String,
+    var surname: String,
+    @ManyToOne
+    @JoinColumn(name="role_id")
+    var role: Role?,
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     val createdAt: LocalDateTime = LocalDateTime.now(),
