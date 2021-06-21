@@ -33,6 +33,7 @@ class UserService(val db: UserRepository) {
         updatedUser.username = user.username
         updatedUser.name = user.name
         updatedUser.surname = user.surname
+        updatedUser.email = user.email
         updatedUser.role = user.role
 
         return ResponseEntity<User?>(this.save(updatedUser), HttpStatus.OK)
