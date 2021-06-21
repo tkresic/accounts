@@ -18,6 +18,7 @@ data class User(
     var username: String,
     var name: String,
     var surname: String,
+    var email: String,
     @ManyToOne
     @JoinColumn(name="role_id")
     var role: Role?,

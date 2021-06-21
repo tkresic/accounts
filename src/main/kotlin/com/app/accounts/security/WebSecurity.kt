@@ -22,7 +22,7 @@ class WebSecurity : WebSecurityConfigurerAdapter() {
         http.cors()
             .and()
             .authorizeRequests()
-            .antMatchers("/", "/swagger-ui/", "/swagger-ui/**", "/swagger-resources/**", "/v2/api-docs", "/webjars/**")
+            .antMatchers("/", "/login", "/swagger-ui/", "/swagger-ui/**", "/swagger-resources/**", "/v2/api-docs", "/webjars/**")
             .permitAll()
             .anyRequest()
             .authenticated()
