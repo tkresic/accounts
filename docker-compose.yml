@@ -8,15 +8,15 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - db
+      - accounts_db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/accounts
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://accounts_db:5432/accounts
       - SPRING_DATASOURCE_USERNAME=accounts
       - SPRING_DATASOURCE_PASSWORD=accounts
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
-  db:
-    image: 'postgres:13.1-alpine'
+  accounts_db:
+    image: postgres:12.2
     environment:
       - POSTGRES_USER=accounts
       - POSTGRES_PASSWORD=accounts
