@@ -41,6 +41,16 @@ class DatabaseSeeder(
                     role = roles[0]
                 )
             )
+            userRepository.save(
+                User(
+                    id = 2,
+                    username = "dkermek",
+                    name = "Dragutin",
+                    surname = "Kermek",
+                    email = "dkermek@foi.hr",
+                    role = roles[0]
+                )
+            )
         }
     }
 } 
