@@ -1,6 +1,8 @@
 # Accounts Microservice
 
-### Runs the project as a Spring Boot application
+One of the microservices that supports the [desktop cash register application in Flutter](https://github.com/tkresic/app).
+
+### Runs the microservice as a Spring Boot application
 
 `./gradlew bootRun`
 
