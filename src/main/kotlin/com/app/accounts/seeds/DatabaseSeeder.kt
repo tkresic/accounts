@@ -27,6 +27,12 @@ class DatabaseSeeder(
                     name = "Administrator",
                 )
             )
+            roleRepository.save(
+                Role(
+                    id = 2,
+                    name = "Zaposlenik",
+                )
+            )
         }
         // Users
         val users = userRepository.findAll()
@@ -49,6 +55,16 @@ class DatabaseSeeder(
                     surname = "Kermek",
                     email = "dkermek@foi.hr",
                     role = roles[0]
+                )
+            )
+            userRepository.save(
+                User(
+                    id = 3,
+                    username = "jdoe",
+                    name = "John",
+                    surname = "Doe",
+                    email = "jdoe@foi.hr",
+                    role = roles[1]
                 )
             )
         }
